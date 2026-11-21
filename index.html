@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>問津講院 · 문진강원 미래사주 | 정통 주역점 · 사주·궁합 · 한문 강독 · 정좌 독공</title>
+<meta name="description" content="전주 곤지산 자락, 문진강원(미래사주). 25년 외길 정통 주역점, 사주·궁합·택일·작명 상담, 주역 원문 강독과 천자문에서 사서삼경까지의 한문 강독, 정좌 독공(명상).">
+<meta name="theme-color" content="#F7F2EA">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="問津講院 · 문진강원 미래사주">
+<meta property="og:description" content="25년 외길 정통 주역점 · 사주·궁합·택일·작명 · 주역 원문과 사서삼경 강독 · 정좌 독공. 전주 곤지산 자락, 고전의 원리로 삶의 길을 비추는 강원.">
+<meta property="og:image" content="assets/hanok-yard.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --hanji:#F7F2EA;
+    --hanji-2:#F1EADE;
+    --hanji-3:#EAE1D1;
+    --paper:#FCF9F3;
+    --ink:#1F1D1A;
+    --ink-2:#4A443B;
+    --ink-3:#7C7468;
+    --ink-4:#A79E8F;
+    --seal:#A93226;
+    --brand:#009DBC;          /* 문진강원 대표 푸른색 — 강원기 바탕에서 측정 */
+    --brand-deep:#00687E;     /* 본문·링크용 짙은 푸른색 */
+    --line:rgba(31,29,26,.14);
+    --line-2:rgba(31,29,26,.08);
+    --serif:"Noto Sans KR","Noto Sans CJK KR",sans-serif;   /* 제목·인용·한자도 고딕으로 통일 */
+    --sans:"Noto Sans KR","Noto Sans CJK KR",sans-serif;
+    --w:1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;
+    background-color:var(--hanji);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    font-size:16px;
+    line-height:1.75;
+    letter-spacing:.01em;
+    word-break:keep-all;
+    overflow-wrap:break-word;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 12% -8%, rgba(255,255,255,.75), rgba(255,255,255,0) 62%),
+      radial-gradient(900px 520px at 92% 8%, rgba(233,222,203,.55), rgba(233,222,203,0) 60%),
+      radial-gradient(1100px 700px at 50% 108%, rgba(226,214,193,.5), rgba(226,214,193,0) 65%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+    background-attachment:scroll;
+    background-repeat:repeat,repeat,repeat,repeat;
+    background-size:auto,auto,auto,180px 180px;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4,p,figure,blockquote{margin:0}
+  ::selection{background:rgba(0,157,188,.18)}
+
+  /* ---------- 강원기(문진강원 깃발) ---------- */
+  .flag{
+    display:block;flex:none;width:auto;
+    box-shadow:0 0 0 1px rgba(0,73,88,.08), 0 6px 16px -14px rgba(0,73,88,.7);
+  }
+  .brand-flag{height:26px;flex:none}
+  .hero-flag{height:clamp(52px,6.4vw,70px)}
+  .footer-flag{height:22px}
+  .map-flag{position:absolute;right:22px;top:20px;height:54px}
+
+  .wrap{width:100%;max-width:var(--w);margin:0 auto;padding:0 28px}
+  .serif{font-family:var(--serif)}
+
+  /* ---------- header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(247,242,234,.88);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(0,157,188,.28);
+  }
+  .site-header .wrap{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    height:72px;
+  }
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .brand .hanja{
+    font-family:var(--sans);font-weight:700;font-size:21px;
+    letter-spacing:.16em;color:var(--ink);white-space:nowrap;
+  }
+  .brand .romaji{
+    font-size:11px;letter-spacing:.24em;color:var(--ink-3);text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .nav{display:flex;align-items:center;gap:30px}
+  .nav a{
+    font-size:13.5px;color:var(--ink-2);letter-spacing:.06em;position:relative;padding:4px 0;
+    transition:color .25s ease;
+  }
+  .nav a::after{
+    content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--brand);
+    transition:right .3s ease;
+  }
+  .nav a:hover{color:var(--ink)}
+  .nav a:hover::after{right:0}
+  .header-tel{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:.05em;color:var(--ink);
+    border:1px solid rgba(31,29,26,.28);border-radius:2px;
+    padding:9px 16px;white-space:nowrap;transition:background .25s ease,border-color .25s ease,color .25s ease;
+  }
+  .header-tel:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
+  .header-tel .dot{width:5px;height:5px;border-radius:50%;background:var(--brand);flex:none}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(48px,7vw,92px) 0 clamp(56px,7vw,96px)}
+  .hero .wrap{
+    display:grid;grid-template-columns:1.02fr .98fr;
+    gap:clamp(36px,5vw,72px);align-items:center;
+  }
+  .eyebrow{
+    display:flex;align-items:center;gap:12px;
+    font-size:11.5px;letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase;
+  }
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--brand);flex:none}
+  .eyebrow-mark{width:18px;height:18px;flex:none;opacity:.85}
+  .hero-title{
+    margin-top:clamp(20px,2.6vw,28px);
+    padding:clamp(16px,2.2vw,24px) 0 clamp(14px,1.8vw,20px);
+    border-top:1px solid rgba(0,157,188,.5);
+    border-bottom:1px solid rgba(0,157,188,.5);
+  }
+  .hero-mark{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+  .hero-mark::after{content:"";flex:1;height:1px;background:linear-gradient(to right,rgba(0,157,188,.45),rgba(0,157,188,0))}
+  .hero h1{
+    font-family:var(--sans);font-weight:700;
+    font-size:clamp(52px,7.8vw,96px);
+    line-height:1.06;letter-spacing:.16em;
+    margin:0 0 0 -.04em;
+    color:var(--ink);
+  }
+  .hero-sub{
+    display:flex;align-items:center;flex-wrap:wrap;gap:12px;
+    margin-top:clamp(12px,1.6vw,16px);font-family:var(--sans);font-weight:500;
+    font-size:clamp(15px,1.8vw,19px);letter-spacing:.14em;color:var(--ink-2);
+  }
+  .hero-sub .sep{width:1px;height:14px;background:var(--ink-4)}
+  .hero-slogan{
+    margin-top:clamp(20px,2.4vw,26px);
+    font-family:var(--sans);font-size:clamp(17px,2.1vw,23px);font-weight:500;
+    line-height:1.7;letter-spacing:.01em;color:var(--ink);
+  }
+  .hero-slogan span{display:block}
+  .hero-slogan em{font-style:normal;color:var(--brand-deep)}
+  .hero-slogan .hero-fields{
+    margin-top:7px;
+    font-size:clamp(14px,1.45vw,19px);
+    letter-spacing:.04em;color:var(--ink-2);
+  }
+  .hero-desc{
+    margin-top:18px;max-width:31em;font-size:15.5px;line-height:1.95;color:var(--ink-2);
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    min-height:48px;padding:0 26px;border-radius:2px;
+    font-size:14px;letter-spacing:.08em;border:1px solid transparent;
+    transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+  }
+  .btn-solid{background:var(--ink);color:var(--hanji);border-color:var(--ink)}
+  .btn-solid:hover{background:#000;transform:translateY(-1px)}
+  .btn-ghost{border-color:rgba(31,29,26,.26);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);background:rgba(31,29,26,.04)}
+
+  .hero-figure{position:relative;margin:0}
+  .photo-frame{
+    position:relative;padding:10px;background:var(--paper);
+    border:1px solid rgba(31,29,26,.16);
+    box-shadow:0 26px 50px -30px rgba(48,38,24,.55), 0 2px 0 rgba(255,255,255,.7) inset;
+  }
+  .photo-frame::after{
+    content:"";position:absolute;inset:10px;pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+  }
+  .photo-frame img{
+    width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;
+    filter:saturate(.86) contrast(1.02) sepia(.1) brightness(1.01);
+  }
+  .figcap{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    margin-top:16px;font-size:11.5px;letter-spacing:.2em;color:var(--ink-3);
+  }
+  .figcap .hanja{font-family:var(--serif);letter-spacing:.28em;margin-right:6px}
+  .seal{
+    width:clamp(48px,5vw,56px);height:auto;flex:none;transform:none;opacity:.95;
+    mix-blend-mode:multiply;
+  }
+  .hero-vline{
+    position:absolute;left:-30px;top:6px;bottom:60px;width:1px;
+    background:linear-gradient(to bottom,rgba(0,157,188,0),rgba(0,157,188,.45),rgba(0,157,188,0));
+  }
+
+  /* ---------- section furniture ---------- */
+  section{position:relative}
+  section[id]{scroll-margin-top:84px}
+  .sec{padding:clamp(56px,7vw,92px) 0;border-top:1px solid var(--line-2)}
+  .sec-head{display:flex;align-items:flex-start;gap:22px;margin-bottom:clamp(32px,4vw,52px)}
+  .sec-num{
+    font-family:var(--serif);font-size:12px;letter-spacing:.1em;color:var(--brand-deep);
+    border:1px solid rgba(0,157,188,.45);border-radius:50%;
+    width:38px;height:38px;flex:none;display:grid;place-items:center;
+    margin-top:2px;
+  }
+  .sec-title{
+    font-family:var(--sans);font-weight:700;font-size:clamp(24px,3.2vw,32px);
+    letter-spacing:.005em;line-height:1.4;
+  }
+  /* 섹션 머리 오른쪽에 조용히 놓이는 심벌 */
+  .sec-head::after{
+    content:"";margin-left:auto;width:26px;height:26px;flex:none;margin-top:2px;
+    background:url(assets/symbol-ink.png) center/contain no-repeat;opacity:.34;
+  }
+  .sec-title .hanja{
+    display:inline-block;font-weight:400;font-size:.62em;color:var(--ink-3);
+    letter-spacing:.3em;margin-right:12px;vertical-align:2px;
+  }
+  .sec-lead{margin-top:10px;font-size:14.5px;color:var(--ink-3);letter-spacing:.04em}
+
+  /* ---------- intro ---------- */
+  .intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,72px)}
+  .intro-body p{
+    font-family:var(--sans);font-weight:400;font-size:clamp(16px,1.85vw,18.5px);
+    line-height:1.95;color:var(--ink);letter-spacing:0;
+  }
+  .intro-body p + p{margin-top:20px}
+  .intro-body strong{font-weight:500;color:var(--ink);box-shadow:inset 0 -.5em 0 rgba(0,157,188,.14)}
+  .quote{
+    margin-top:32px;padding:22px 0 22px 24px;border-left:2px solid rgba(0,157,188,.55);
+  }
+  .quote-sym{width:16px;height:16px;opacity:.4;margin-bottom:10px}
+  .quote .cn{font-family:var(--sans);font-weight:600;font-size:17px;letter-spacing:.08em;color:var(--ink-2)}
+  .quote .kr{margin-top:8px;font-size:13px;color:var(--ink-3);letter-spacing:.03em}
+  .pillars{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .pillars li{padding:22px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:16px}
+  .pillars .k{font-family:var(--sans);font-weight:600;font-size:19px;letter-spacing:.1em;color:var(--brand-deep);line-height:1.2;padding-top:2px}
+  .pillars h3{font-family:var(--sans);font-weight:600;font-size:14.5px;letter-spacing:.02em}
+  .pillars p{margin-top:6px;font-size:13.5px;line-height:1.85;color:var(--ink-3)}
+
+  /* ---------- services : 상담 · 강의 · 수행 ---------- */
+  .sgroup + .sgroup{margin-top:clamp(34px,4.2vw,52px)}
+  .sgroup-head{
+    display:flex;align-items:flex-start;gap:14px;
+    padding-bottom:16px;margin-bottom:20px;
+    border-bottom:1px solid rgba(31,29,26,.4);
+  }
+  .sgroup-sym{flex:none;width:26px;height:26px;margin-top:7px;opacity:.72}
+  .sgroup-body{min-width:0}
+  .sgroup-head h3{
+    display:flex;align-items:baseline;gap:12px;
+    font-size:clamp(26px,3.1vw,33px);font-weight:700;letter-spacing:.14em;line-height:1.2;
+    color:var(--ink);
+  }
+  .sgroup-kr{font-size:12px;font-weight:500;letter-spacing:.24em;color:var(--ink-4)}
+  .sgroup-desc{
+    margin-top:9px;max-width:52em;
+    font-size:13.8px;line-height:1.9;letter-spacing:0;color:var(--ink-3);
+  }
+
+  .cards{display:grid;gap:16px}
+  .cards.two{grid-template-columns:repeat(2,1fr)}
+  .cards.four{grid-template-columns:repeat(4,1fr);gap:14px}
+  .cards.one{grid-template-columns:1fr}
+  .card{
+    position:relative;display:flex;flex-direction:column;
+    color:inherit;
+    background:linear-gradient(to bottom,var(--paper),rgba(252,249,243,.55));
+    border:1px solid var(--line);padding:26px 24px 24px;
+    transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  }
+  .card::before{content:"";position:absolute;left:24px;right:24px;top:0;height:2px;background:var(--brand);opacity:.9}
+  .card:hover{transform:translateY(-3px);border-color:rgba(31,29,26,.26);box-shadow:0 18px 34px -26px rgba(48,38,24,.6)}
+  .card .idx{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.2em;color:var(--ink-4)}
+  .card h3{
+    font-family:var(--sans);font-weight:700;font-size:20px;line-height:1.45;
+    letter-spacing:0;margin-top:14px;
+  }
+  .card h3 .note{
+    display:block;font-size:12.5px;font-weight:400;color:var(--ink-3);
+    letter-spacing:.04em;margin-top:5px;
+  }
+  .card .sub{font-family:var(--sans);font-weight:500;font-size:11.5px;letter-spacing:.14em;color:var(--brand-deep);margin-top:8px}
+  .card p{margin-top:14px;font-size:14.5px;line-height:1.9;color:var(--ink-2)}
+  .card .tags{
+    display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;
+  }
+  .card .tags span{
+    font-size:11px;letter-spacing:.08em;color:var(--ink-3);
+    border:1px solid var(--line);padding:4px 9px;border-radius:1px;background:rgba(255,255,255,.4);
+  }
+  .cards.four .card{padding:22px 20px 20px}
+  .cards.four .card h3{font-size:17.5px}
+  .cards.four .card p{font-size:13.5px;line-height:1.85}
+  .cards.one .card{max-width:760px}
+  .card .more{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin-top:auto;padding-top:18px;border-top:1px solid var(--line-2);
+    font-size:11.5px;letter-spacing:.18em;color:var(--ink-3);
+    transition:color .25s ease;
+  }
+  .card .more .arrow{font-size:14px;letter-spacing:0;transition:transform .3s ease}
+  .card:hover .more{color:var(--brand-deep)}
+  .card:hover .more .arrow{transform:translateX(3px)}
+  .consult-note{
+    display:grid;grid-template-columns:1fr auto;align-items:center;gap:14px 34px;
+    margin-top:26px;padding:22px 26px;border:1px solid var(--line);border-left:3px solid var(--brand);
+    background:rgba(241,234,222,.6);
+  }
+  .consult-note p{font-size:14.5px;color:var(--ink-2);letter-spacing:.02em}
+  .consult-note p::before{
+    content:"";display:inline-block;width:18px;height:18px;margin-right:10px;vertical-align:-3px;
+    background:url(assets/symbol-ink.png) center/contain no-repeat;opacity:.55;
+  }
+  .consult-note a{
+    font-family:var(--sans);font-weight:600;font-size:clamp(19px,2.4vw,23px);letter-spacing:.02em;
+    border-bottom:1px solid rgba(31,29,26,.3);padding-bottom:2px;
+    transition:color .25s,border-color .25s;white-space:nowrap;
+  }
+  .consult-note a:hover{color:var(--brand-deep);border-color:var(--brand-deep)}
+
+  /* ---------- fees ---------- */
+  .fee-block + .fee-block{margin-top:clamp(30px,4vw,46px)}
+  .fee-head{
+    display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+    padding-bottom:11px;border-bottom:1px solid rgba(31,29,26,.55);
+  }
+  .fee-head h3{font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:.05em}
+  .fee-head .han{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.18em;color:var(--ink-4)}
+  .fee-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px)}
+  .fee-list{list-style:none;margin:0;padding:0}
+  .fee-list li{
+    display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;
+    padding:13px 0;border-bottom:1px solid var(--line-2);
+  }
+  .fee-list .nm{font-size:14.5px;color:var(--ink);letter-spacing:.01em;line-height:1.55}
+  .fee-list .nm em{display:block;font-style:normal;font-size:11.5px;letter-spacing:.02em;color:var(--ink-4);margin-top:4px}
+  .fee-list .pr{font-family:var(--sans);font-weight:500;font-size:15px;letter-spacing:.01em;color:var(--ink);white-space:nowrap}
+  .fee-list .pr.q{color:var(--ink-2);letter-spacing:.12em;font-size:14px}
+  .fee-foot{
+    margin-top:22px;padding-top:16px;border-top:1px solid var(--line-2);
+    font-size:12.5px;line-height:1.9;color:var(--ink-3);
+  }
+  .fee-foot b{font-weight:500;color:var(--ink-2)}
+
+  /* ---------- channels ---------- */
+  .channels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .ch{
+    position:relative;display:flex;flex-direction:column;justify-content:space-between;
+    min-height:158px;padding:24px;border:1px solid var(--line);
+    background:rgba(255,253,248,.5);
+    transition:background .3s ease,border-color .3s ease,transform .3s ease;
+  }
+  .ch:hover{background:var(--brand-deep);border-color:var(--brand-deep);transform:translateY(-3px)}
+  .ch-head{display:flex;align-items:center;gap:11px;min-height:32px}
+  .ch-ic{display:flex;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:30px;border-radius:7px;background:rgba(252,249,243,0);transition:background .3s ease}
+  .ch:hover .ch-ic{background:rgba(252,249,243,.92)}
+  .ch-ic svg{display:block}
+  .ch .name{font-family:var(--sans);font-size:19px;font-weight:600;letter-spacing:.01em;line-height:1.25;transition:color .3s}
+  .ch .handle{margin-top:6px;font-size:12px;letter-spacing:.06em;color:var(--ink-3);transition:color .3s;word-break:break-all}
+  .ch .go{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin-top:24px;font-size:11px;letter-spacing:.24em;color:var(--ink-4);transition:color .3s;
+  }
+  .ch .go .arrow{font-family:var(--sans);font-size:15px;transition:transform .3s ease,color .3s}
+  .ch:hover .name,.ch:hover .go .arrow{color:var(--hanji)}
+  .ch:hover .handle,.ch:hover .go{color:rgba(247,242,234,.62)}
+  .ch:hover .go .arrow{transform:translate(2px,-2px)}
+
+  /* ---------- visit ---------- */
+  .visit-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,4vw,56px);align-items:start}
+  .addr{
+    font-family:var(--sans);font-weight:500;font-size:clamp(18px,2.3vw,23px);line-height:1.7;
+    letter-spacing:0;color:var(--ink);
+  }
+  .addr .zip{display:block;font-size:11.5px;letter-spacing:.26em;color:var(--ink-3);margin-bottom:10px;font-family:var(--sans)}
+  .visit-list{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line)}
+  .visit-list li{
+    display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:baseline;
+    padding:15px 0;border-bottom:1px solid var(--line);
+  }
+  .visit-list dt,.visit-list .lb{font-size:11.5px;letter-spacing:.2em;color:var(--ink-4)}
+  .visit-list .vl{font-size:15px;color:var(--ink-2);letter-spacing:.02em}
+  .visit-list a.vl:hover{color:var(--brand-deep)}
+  .map-panel{
+    position:relative;border:1px solid var(--line);background:var(--paper);
+    padding:26px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between;
+    overflow:hidden;
+  }
+  .map-panel .grid-lines{
+    position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background-image:
+      linear-gradient(to right,rgba(31,29,26,.07) 1px,transparent 1px),
+      linear-gradient(to bottom,rgba(31,29,26,.07) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(circle at 60% 40%,#000,transparent 82%);
+    -webkit-mask-image:radial-gradient(circle at 60% 40%,#000,transparent 82%);
+  }
+  .map-panel .pin{
+    position:absolute;left:57%;top:37%;width:12px;height:12px;border-radius:50%;
+    background:var(--brand);box-shadow:0 0 0 7px rgba(0,157,188,.16),0 0 0 16px rgba(0,157,188,.08);
+  }
+  .map-panel .badge{
+    position:relative;display:flex;align-items:center;gap:8px;
+    font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.16em;color:var(--ink-3);
+  }
+  .map-panel .badge::before{
+    content:"";width:14px;height:14px;flex:none;
+    background:url(assets/symbol-ink.png) center/contain no-repeat;opacity:.5;
+  }
+  .map-panel .map-wm{
+    position:absolute;left:50%;top:46%;width:96px;height:96px;margin:-48px 0 0 -48px;pointer-events:none;
+    background:url(assets/symbol-ink.png) center/contain no-repeat;opacity:.05;
+  }
+  .map-panel .foot{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .map-panel .foot .sub{font-size:11.5px;letter-spacing:.14em;color:var(--ink-3)}
+  .map-link{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.08em;
+    border-bottom:1px solid rgba(31,29,26,.3);padding-bottom:3px;transition:color .25s,border-color .25s;
+  }
+  .map-link:hover{color:var(--brand-deep);border-color:var(--brand-deep)}
+
+  /* ---------- footer ---------- */
+  .site-footer{border-top:2px solid var(--brand);padding:44px 0 40px;background:rgba(234,225,209,.35)}
+  .footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid var(--line-2)}
+  .footer-brand{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:.16em;
+  }
+  .footer-nav{display:flex;gap:22px;flex-wrap:wrap}
+  .footer-nav a{font-size:12.5px;color:var(--ink-3);letter-spacing:.06em}
+  .footer-nav a:hover{color:var(--ink)}
+  .biz{
+    display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:10px 32px;
+    margin-top:24px;font-size:12.5px;line-height:1.9;color:var(--ink-3);letter-spacing:.01em;
+  }
+  .biz b{font-weight:500;color:var(--ink-2);margin-right:8px;letter-spacing:.06em}
+  .biz .biz-hours{grid-column:1/-1}
+  .biz a:hover{color:var(--brand-deep)}
+  .copyright{
+    margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-size:11.5px;letter-spacing:.1em;color:var(--ink-4);
+  }
+  .copyright .seal-mini{width:24px;opacity:.55;mix-blend-mode:multiply}
+
+  :focus-visible{outline:2px solid var(--brand-deep);outline-offset:3px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1024px){
+    .cards.four{grid-template-columns:repeat(2,1fr)}
+    .channels{grid-template-columns:repeat(2,1fr)}
+    .hero .wrap{grid-template-columns:1fr;gap:44px}
+    .hero-figure{max-width:560px}
+    .hero-vline{display:none}
+    .intro-grid{grid-template-columns:1fr;gap:36px}
+    .visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:900px){
+    .fee-cols{grid-template-columns:1fr}
+  }
+  @media (max-width:900px){
+    .brand .romaji{display:none}
+    .header-tel .label{display:none}
+    .nav{gap:18px}
+    .nav a{font-size:12.5px}
+  }
+  @media (max-width:820px){
+    .nav{gap:18px}
+    .nav a{font-size:12.5px}
+    .site-header .wrap{height:64px;gap:16px}
+  }
+  @media (max-width:700px){
+    .nav{display:none}
+  }
+  @media (max-width:620px){
+    .wrap{padding:0 20px}
+    .brand .romaji{display:none}
+    .brand-flag{height:22px}
+    .brand .hanja{font-size:18.5px;letter-spacing:.12em}
+    .header-tel{padding:8px 12px;font-size:12px}
+    .header-tel .label{display:none}
+    .hero{padding-top:36px}
+    .hero-mark .flag{height:46px}
+    .hero-mark{margin-bottom:11px}
+    .eyebrow{font-size:11px;letter-spacing:.14em;gap:9px}
+    .eyebrow::before{width:24px}
+    .hero h1{font-size:clamp(44px,13vw,60px);letter-spacing:.1em;margin-top:18px}
+    .hero-sub{font-size:14.5px;letter-spacing:.1em;gap:9px}
+    .hero-desc{font-size:15px}
+    .hero-actions .btn{flex:1 1 auto}
+    .cards.two,.cards.four,.channels{grid-template-columns:1fr}
+    .card{min-height:auto}
+    .sgroup-head h3{font-size:23px;letter-spacing:.1em;gap:9px}
+    .sgroup-sym{width:24px;height:24px;margin-top:4px}
+    .sgroup-desc{font-size:13.5px;line-height:1.85}
+    .sec-num{width:32px;height:32px;font-size:11px}
+    .sec-head{gap:14px}
+    .sec-title .hanja{display:block;margin:0 0 6px}
+    .seal{width:64px}
+    .figcap{font-size:10.5px;letter-spacing:.16em}
+    .consult-note{padding:18px;grid-template-columns:1fr;gap:10px}
+    .biz{grid-template-columns:1fr;gap:4px 0}
+    .map-panel{min-height:220px}
+    .visit-list li{grid-template-columns:76px 1fr;gap:10px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important;animation:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="문진강원 홈">
+      <img class="flag brand-flag" src="assets/flag-sm.png" alt="" width="47" height="26">
+      <span class="hanja">問津講院</span>
+      <span class="romaji">Munjin Gangwon</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#about">강원 소개</a>
+      <a href="#services">술수 · 학문 · 영성</a>
+      <a href="#fees">비용 안내</a>
+      <a href="#channels">공식 채널</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="header-tel" href="tel:01037072331">
+      <span class="dot" aria-hidden="true"></span><span class="label">상담 문의</span> 010-3707-2331
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">전주 · 곤지산</p>
+        <div class="hero-title">
+          <div class="hero-mark" aria-hidden="true">
+            <img class="flag hero-flag" src="assets/flag.png" alt="" width="127" height="70">
+          </div>
+          <h1>問津講院</h1>
+          <p class="hero-sub">
+            <span>문진강원</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span>미래사주</span>
+          </p>
+        </div>
+        <div class="hero-slogan">
+          <span><em>25년 외길</em> 정통 주역점</span>
+          <span class="hero-fields">사주 · 궁합 · 주역 · 사서삼경 원문 강독 · 정좌 독공</span>
+        </div>
+        <p class="hero-desc">
+          자극적인 말이나 근거 없는 말 대신, 고전의 원리로 지금의 자리를 읽습니다.
+          물어야 할 것을 묻고, 나아갈 때와 물러설 때를 함께 짚어 드리는 강원입니다.
+          사주와 주역점, 명리학 · 주역 · 사서삼경 강의, 그리고 앉아서 마음을 비우는 정좌 독공까지 — 술수 · 학문 · 영성 세 분야로 길을 안내합니다.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="tel:01037072331">상담 문의하기</a>
+          <a class="btn btn-ghost" href="#services">상담 · 강의 살펴보기</a>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <span class="hero-vline" aria-hidden="true"></span>
+        <div class="photo-frame">
+          <img src="assets/hanok-yard.jpg" alt="문진강원 한옥 마당 — 마루와 잔디, 나무 그늘 아래 놓인 상" width="834" height="561">
+        </div>
+        <figcaption class="figcap">
+          <span><span class="hanja">講院 마당</span>전주 · 곤지산</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">一</span>
+        <div>
+          <h2 class="sec-title"><span class="hanja">序</span>문진강원 소개</h2>
+          <p class="sec-lead">길을 묻는 자리를 엽니다</p>
+        </div>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-body">
+          <p>
+            問津은 <strong>나루를 묻는다</strong>는 뜻입니다. 어디로 건너야 할지 알 수 없을 때,
+            옳은 길을 먼저 묻는 일에서 사람의 삶은 달라집니다.
+            문진강원은 그 물음에 고전으로 답을 드립니다.
+          </p>
+          <p>
+            25년 외길로 동양의 자연철학과 도학을 공부해 왔고, 주역 원문과 천자문에서 사서삼경을 강독해 왔습니다.
+            점을 재미로 소비하게 하지 않고, <strong>삶의 갈림길에서 스스로 판단할 수 있는 눈</strong>을
+            함께 기르는 것을 본분으로 삼습니다.
+            그 눈은 앉아서 마음을 가다듬는 자리에서 함께 자랍니다.
+          </p>
+          <blockquote class="quote">
+            <img class="quote-sym" src="assets/symbol-ink.png" alt="" width="16" height="16">
+            <p class="cn">孔子使子路問津焉</p>
+            <p class="kr">『논어』 미자편 — 공자께서 자로로 하여금 나루를 묻게 하시니</p>
+          </blockquote>
+        </div>
+
+        <ul class="pillars">
+          <li>
+            <span class="k">正</span>
+            <div>
+              <h3>정통으로 묻습니다</h3>
+              <p>64괘와 괘효사의 원문에 근거해 풀이합니다. 근거 없는 말로 판단을 흔들지 않습니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="k">講</span>
+            <div>
+              <h3>함께 읽습니다</h3>
+              <p>천자문에서 사서삼경까지, 원문을 소리 내어 읽고 뜻을 새기는 서당식 강독을 이어 갑니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="k">津</span>
+            <div>
+              <h3>건널 길을 안내합니다</h3>
+              <p>지금 무엇을 묻고 있는지부터 함께 정리합니다. 답은 그다음에 나옵니다.</p>
+            </div>
+          </li>
+          <li>
+            <span class="k">止</span>
+            <div>
+              <h3>고요히 앉습니다</h3>
+              <p>멈출 곳을 알아야 마음이 선다고 하였습니다. 정좌 독공으로 마음을 비웁니다.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">二</span>
+        <div>
+          <h2 class="sec-title"><span class="hanja">業</span>術數 · 學問 · 靈性</h2>
+          <p class="sec-lead">문진강원의 세 분야 — 묻는 자리, 묻고 배우는 자리, 고요히 앉는 자리</p>
+        </div>
+      </div>
+
+      <!-- 1. 술수 -->
+      <div class="sgroup">
+        <div class="sgroup-head">
+          <img class="sgroup-sym" src="assets/symbol-ink.png" alt="" width="26" height="26">
+          <div class="sgroup-body">
+            <h3>術數<span class="sgroup-kr">술수</span></h3>
+            <p class="sgroup-desc">사주명리와 주역의 이치로 타고난 기질과 때의 흐름을 살피고, 삶의 갈림길에서 긍정적인 선택과 방향을 돕는 실용의 지혜를 다룹니다.</p>
+          </div>
+        </div>
+        <div class="cards two">
+          <a class="card" href="saju.html">
+            <p class="idx">一</p>
+            <h3>사주명리학 상담 <span class="note">사주 · 궁합 · 택일 · 작명</span></h3>
+            <p class="sub">四柱 · 命理</p>
+            <p>타고난 기질과 때를 살펴 배우자와의 인연, 날의 선택, 좋은 이름을 궁구합니다. 현재 처해진 상황을 먼저 듣고 풀이합니다.</p>
+            <div class="tags"><span>사주</span><span>궁합</span><span>택일</span><span>작명</span></div>
+            <p class="more"><span>자세히 보기</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+          <a class="card" href="juyeok.html">
+            <p class="idx">二</p>
+            <h3>주역점 상담 <span class="note">정통 주역점</span></h3>
+            <p class="sub">周易 · 占</p>
+            <p>인생과 사업의 갈림길에서 64괘의 원문에 비추어 성패와 시기를 짚습니다. 고비에서 나아갈 방향을 찾습니다.</p>
+            <div class="tags"><span>인생의 갈림길</span><span>사업 · 진로</span><span>성패 판단</span></div>
+            <p class="more"><span>자세히 보기</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- 2. 학문 -->
+      <div class="sgroup">
+        <div class="sgroup-head">
+          <img class="sgroup-sym" src="assets/symbol-ink.png" alt="" width="26" height="26">
+          <div class="sgroup-body">
+            <h3>學問<span class="sgroup-kr">학문</span></h3>
+            <p class="sgroup-desc">명리학과 주역점을 배우는 강의부터 천자문 · 사서삼경 · 주역 원문을 원문 그대로 읽는 정통 강독까지, 기초에서 완성까지 함께 이어 갑니다.</p>
+          </div>
+        </div>
+        <div class="cards two">
+          <a class="card" href="myeongri.html">
+            <p class="idx">三</p>
+            <h3>명리학 강의 <span class="note">별도 문의</span></h3>
+            <p class="sub">命理學講義</p>
+            <p>사주를 읽는 법을 기초에서 심화까지. 주 1회 대면·비대면으로 진행하고, 진도와 기간은 상담으로 정합니다.</p>
+            <div class="tags"><span>기초 ~ 심화</span><span>주 1회</span><span>대면 · 비대면</span></div>
+            <p class="more"><span>비용 · 안내</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+          <a class="card" href="juyeok-class.html">
+            <p class="idx">四</p>
+            <h3>주역점 강의 <span class="note">별도 문의</span></h3>
+            <p class="sub">周易占講義</p>
+            <p>괘를 세우는 법에서 풀이까지, 주역점을 직접 볼 수 있도록 주역 기초에서 완성까지 이끕니다.</p>
+            <div class="tags"><span>주역 기초</span><span>~ 완성</span><span>단체 외부강의</span></div>
+            <p class="more"><span>비용 · 안내</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+          <a class="card" href="taegil-class.html">
+            <p class="idx">五</p>
+            <h3>택일법 · 궁합법 · 작명법 강의 <span class="note">별도 문의</span></h3>
+            <p class="sub">擇日 · 宮合 · 作名講義</p>
+            <p>사주명리의 이치를 바탕으로 길일을 가리는 택일법, 인연의 조화를 살피는 궁합법, 복된 이름을 짓는 작명법까지 실전 응용 강의를 진행합니다.</p>
+            <div class="tags"><span>택일법</span><span>궁합법</span><span>작명법</span></div>
+            <p class="more"><span>비용 · 안내</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+          <a class="card" href="juyeok-classics.html">
+            <p class="idx">六</p>
+            <h3>주역 원문 강의 <span class="note">64괘 · 십익</span></h3>
+            <p class="sub">周易講讀</p>
+            <p>주역 원문을 강독합니다. 우주 변화의 원리를 체득합니다.</p>
+            <div class="tags"><span>64괘</span><span>십익</span><span>원문 강독</span></div>
+            <p class="more"><span>자세히 보기</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+
+          <a class="card" href="hanmun.html">
+            <p class="idx">七</p>
+            <h3>사서삼경 강의 <span class="note">천자문부터 사서삼경</span></h3>
+            <p class="sub">千字文 ~ 四書三經</p>
+            <p>천자문부터 사서삼경까지, 기초부터 시작합니다. 진도와 시간은 각각 수준에 맞춥니다.</p>
+            <div class="tags"><span>1:1 강독</span><span>천자문</span><span>사서삼경</span></div>
+            <p class="more"><span>자세히 보기</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. 영성 -->
+      <div class="sgroup">
+        <div class="sgroup-head">
+          <img class="sgroup-sym" src="assets/symbol-ink.png" alt="" width="26" height="26">
+          <div class="sgroup-body">
+            <h3>靈性<span class="sgroup-kr">영성</span></h3>
+            <p class="sgroup-desc">고요히 앉아 마음을 비우고 숨을 고르며 마음의 바탕을 닦는 정좌 독공(명상 수련)으로, 흔들리지 않는 내면의 힘을 기릅니다.</p>
+          </div>
+        </div>
+        <div class="cards one">
+          <a class="card" href="meditation.html">
+            <p class="idx">八</p>
+            <h3>정좌 독공(명상 수련) <span class="note">명상</span></h3>
+            <p class="sub">靜坐篤工</p>
+            <p>고요히 앉아서 마음을 비우고 숨을 고르며 마음을 지켜보는 공부. 마음의 바탕이 되는 자리를 닦습니다.</p>
+            <div class="tags"><span>정좌</span><span>호흡</span><span>날마다 짧게</span></div>
+            <p class="more"><span>자세히 보기</span><span class="arrow" aria-hidden="true">→</span></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="consult-note">
+        <p>술수 · 학문 · 영성 어느 분야든 문의는 전화·문자·이메일로 받습니다. 현재 처해진 상황과 궁금한 점을 먼저 들려주시면 그에 맞는 방향과 선택을 안내해 드립니다.</p>
+        <a href="tel:01037072331">010-3707-2331</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEES -->
+  <section class="sec" id="fees">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">三</span>
+        <div>
+          <h2 class="sec-title">비용 안내</h2>
+          <p class="sec-lead">상담과 강의의 기본 비용입니다 · 사안에 따라 달라지므로 먼저 문의해 주십시오</p>
+        </div>
+      </div>
+
+      <div class="fee-block">
+        <div class="fee-head">
+          <h3>상담</h3>
+          <span class="han">命理 · 占</span>
+        </div>
+        <div class="fee-cols">
+          <ul class="fee-list">
+            <li><span class="nm">주역점<em>사안별 별도 문의 · 가격 차등</em></span><span class="pr">100,000원~</span></li>
+            <li><span class="nm">원컷 주역점<em>한 문항 · 문자 답변</em></span><span class="pr">15,000원</span></li>
+            <li><span class="nm">사주 상담<em>원장 직접 상담</em></span><span class="pr">100,000원~</span></li>
+            <li><span class="nm">자녀진로 · 적성<em>학생 · 대학생 · 취준생 · 이직</em></span><span class="pr">100,000원~</span></li>
+            <li><span class="nm">심층 궁합<em>2인 기본</em></span><span class="pr">200,000원~</span></li>
+            <li><span class="nm">결혼 · 이사 · 개업 택일<em>2인 300,000원</em></span><span class="pr">200,000원~</span></li>
+          </ul>
+          <ul class="fee-list">
+            <li><span class="nm">감명</span><span class="pr">100,000원~</span></li>
+            <li><span class="nm">출산택일</span><span class="pr">500,000원~</span></li>
+            <li><span class="nm">아호</span><span class="pr">300,000원~</span></li>
+            <li><span class="nm">작명 · 개명</span><span class="pr">500,000원~</span></li>
+            <li><span class="nm">상호</span><span class="pr">500,000원~</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fee-block">
+        <div class="fee-head">
+          <h3>강의</h3>
+          <span class="han">講</span>
+        </div>
+        <div class="fee-cols">
+          <ul class="fee-list">
+            <li><span class="nm">명리학 강의</span><span class="pr q">별도 문의</span></li>
+            <li><span class="nm">주역 원문 강의</span><span class="pr q">문의요망</span></li>
+            <li><span class="nm">사서삼경 강의<em>(소학, 대학, 논어, 맹자, 중용)</em></span><span class="pr q">문의요망</span></li>
+          </ul>
+          <ul class="fee-list">
+            <li><span class="nm">한문초급과정<em>(천자문, 사자소학, 동몽선습, 격몽요결, 명심보감)</em></span><span class="pr q">문의요망</span></li>
+            <li><span class="nm">주역점 강의<em>주역 기초 ~ 완성</em></span><span class="pr q">문의요망</span></li>
+            <li><span class="nm">택일법 · 궁합법 · 작명법 강의<em>단체 외부강의 환영</em></span><span class="pr q">문의요망</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="fee-foot">표시된 금액은 기본 시작가이며 <b>사안의 범위와 기간에 따라 달라집니다.</b> 강의는 일정과 인원에 따라 비용을 따로 안내드립니다. 정확한 비용은 전화 · 문자 · 이메일로 문의해 주십시오.</p>
+    </div>
+  </section>
+
+  <!-- CHANNELS -->
+  <section class="sec" id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">四</span>
+        <div>
+          <h2 class="sec-title">외부 공식 채널</h2>
+          <p class="sec-lead">문진강원의 글과 강의는 아래 채널에서 이어집니다</p>
+        </div>
+      </div>
+
+      <div class="channels">
+        <a class="ch" href="https://pf.kakao.com/_pguvX" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="7" fill="#FEE500"/><g transform="translate(5.6 4.9) scale(0.867)"><path fill="#FFFFFF" d="M12 18.75c-.591 0-1.1697-.0413-1.7317-.1209-.5626.3965-3.813 2.6797-4.1198 2.7225 0 0-.1258.0489-.2328-.0141s-.0876-.2282-.0876-.2282c.0322-.2198.8426-3.0183.992-3.5333-2.7452-1.36-4.5701-3.7686-4.5701-6.5135C2.25 6.8168 6.6152 3.375 12 3.375s9.75 3.4418 9.75 7.6875c0 4.2457-4.3652 7.6875-9.75 7.6875z"/><path fill="#3C1E1E" d="M8.0496 9.8672h-.8777v3.3417c0 .2963-.2523.5372-.5625.5372s-.5625-.2409-.5625-.5372V9.8672h-.8777c-.3044 0-.552-.2471-.552-.5508s.2477-.5508.552-.5508h2.8804c.3044 0 .552.2471.552.5508s-.2477.5508-.552.5508zm10.9879 2.9566a.558.558 0 0 1 .108.4167.5588.5588 0 0 1-.2183.371.5572.5572 0 0 1-.3383.1135.558.558 0 0 1-.4493-.2236l-1.3192-1.7479-.1952.1952v1.2273a.5635.5635 0 0 1-.5627.5628.563.563 0 0 1-.5625-.5625V9.3281c0-.3102.2523-.5625.5625-.5625s.5625.2523.5625.5625v1.209l1.5694-1.5694c.0807-.0807.1916-.1252.312-.1252.1404 0 .2814.0606.3871.1661.0985.0984.1573.2251.1654.3566.0082.1327-.036.2542-.1241.3425l-1.2818 1.2817 1.3845 1.8344zm-8.3502-3.5023c-.095-.2699-.3829-.5475-.7503-.5557-.3663.0083-.6542.2858-.749.5551l-1.3455 3.5415c-.1708.5305-.0217.7272.1333.7988a.8568.8568 0 0 0 .3576.0776c.2346 0 .4139-.0952.4678-.2481l.2787-.7297 1.7152.0001.2785.7292c.0541.1532.2335.2484.4681.2484a.8601.8601 0 0 0 .3576-.0775c.1551-.0713.3041-.2681.1329-.7999l-1.3449-3.5398zm-1.3116 2.4433l.5618-1.5961.5618 1.5961H9.3757zm5.9056 1.3836c0 .2843-.2418.5156-.5391.5156h-1.8047c-.2973 0-.5391-.2314-.5391-.5156V9.3281c0-.3102.2576-.5625.5742-.5625s.5742.2523.5742.5625v3.3047h1.1953c.2974 0 .5392.2314.5392.5156z"/></g></svg>
+              </span>
+              <p class="name">카카오톡 채널</p>
+            </div>
+            <p class="handle">문진강원</p>
+          </div>
+          <div class="go"><span>1:1 문의 · 새소식</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="ch" href="https://kmong.com/@미래사주" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="7" fill="#92FA72"/><path fill="#0B0B0B" transform="translate(9.36 5.71) scale(0.027762)" d="M316.671 437.324C448.722 366.152 490.571 255.462 498.047 165.162C498.047 161.181 495.037 157.879 490.862 157.879H349.975C346.285 157.879 343.081 160.792 342.984 164.482C340.362 202.544 307.155 311.195 160.248 341.004V7.18516C160.248 3.30129 157.044 0 153.063 0H7.70872C3.72775 0 0.52356 3.20419 0.52356 7.18516V695.116C0.52356 699 3.72775 702.301 7.70872 702.301H153.257C157.141 702.301 160.442 699.097 160.442 695.116V509.952C160.442 503.35 168.695 500.242 172.967 505.389L333.857 699.776C335.216 701.427 337.158 702.398 339.391 702.398H509.408C515.33 702.398 518.632 695.601 515.039 690.941L316.962 437.518H316.671V437.324Z"/></svg>
+              </span>
+              <p class="name">크몽</p>
+            </div>
+            <p class="handle">kmong.com/@미래사주</p>
+          </div>
+          <div class="go"><span>상담 · 강의</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="ch" href="https://blog.naver.com/menes01" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#03C75A" d="M16.273 12.845 7.376 0H0v24h7.726V11.156L16.624 24H24V0h-7.727v12.845Z"/></svg>
+              </span>
+              <p class="name">네이버 블로그</p>
+            </div>
+            <p class="handle">blog.naver.com/menes01</p>
+          </div>
+          <div class="go"><span>글 · 기록</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="ch" href="https://www.instagram.com/futura.saju/" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="27" height="27" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="igGrad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FEDA75"/><stop offset=".28" stop-color="#FA7E1E"/><stop offset=".52" stop-color="#D62976"/><stop offset=".74" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><path fill="url(#igGrad)" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+              </span>
+              <p class="name">인스타그램</p>
+            </div>
+            <p class="handle">@futura.saju</p>
+          </div>
+          <div class="go"><span>짧은 이야기</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="ch" href="https://www.youtube.com/@미래사주" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </span>
+              <p class="name">유튜브</p>
+            </div>
+            <p class="handle">youtube.com/@미래사주</p>
+          </div>
+          <div class="go"><span>강의 영상</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="ch" href="https://www.daangn.com/kr/local-profile/%EB%AC%B8%EC%A7%84%EA%B0%95%EC%9B%90-46cbgq1tn4zh/" target="_blank" rel="noopener">
+          <div>
+            <div class="ch-head">
+              <span class="ch-ic" aria-hidden="true">
+                <svg width="17" height="28" viewBox="10.4 3.8 19.7 32.4" xmlns="http://www.w3.org/2000/svg"><path fill="#FF6F0F" d="M20.269 15.922c-5.093 0-9.221 4.002-9.221 9.046 0 6.973 9.246 10.674 9.22 10.664-.025.01 9.222-3.69 9.222-10.664 0-5.044-4.129-9.046-9.221-9.046Zm0 12.707c-.69 0-1.365-.203-1.94-.583a3.468 3.468 0 0 1-1.285-1.551 3.426 3.426 0 0 1 .757-3.767 3.52 3.52 0 0 1 3.804-.75 3.482 3.482 0 0 1 1.567 1.274 3.432 3.432 0 0 1-.434 4.365 3.52 3.52 0 0 1-2.469 1.012Z"/><path fill="#00A05B" d="M22.345 4.399c-2.152 0-3.65 1.489-3.886 3.242-2.87-.785-5.118 1.368-5.118 3.751 0 1.818 1.258 3.286 2.943 3.763 1.357.384 3.799.098 3.799.098-.012-.587.534-1.232 1.376-1.82 2.396-1.669 4.271-2.455 4.56-4.732.304-2.376-1.482-4.302-3.674-4.302Z"/></svg>
+              </span>
+              <p class="name">당근</p>
+            </div>
+            <p class="handle">문진강원 · 동네업체</p>
+          </div>
+          <div class="go"><span>동네업체 · 상담/가격표</span><span class="arrow" aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="sec" id="visit">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">五</span>
+        <div>
+          <h2 class="sec-title">오시는 길</h2>
+          <p class="sec-lead">전주 완산구 곤지산 자락</p>
+        </div>
+      </div>
+
+      <div class="visit-grid">
+        <div>
+          <p class="addr">
+            <span class="zip">전북특별자치도 전주시 완산구</span>
+            곤지산3길 7-30
+          </p>
+          <ul class="visit-list">
+            <li><span class="lb">연락처</span><a class="vl" href="tel:01037072331">010-3707-2331</a></li>
+            <li><span class="lb">이메일</span><a class="vl" href="mailto:menes9237827@gmail.com">menes9237827@gmail.com</a></li>
+            <li><span class="lb">영업시간</span><span class="vl">09:00 ~ 22:00 <span style="color:var(--ink-3)">· 매주 일요일 휴무</span></span></li>
+            <li><span class="lb">문의</span><span class="vl">전화·문자 또는 공식 채널 메시지</span></li>
+          </ul>
+        </div>
+
+        <div class="map-panel">
+          <img class="flag map-flag" src="assets/flag-sm.png" alt="" width="98" height="54">
+          <span class="map-wm" aria-hidden="true"></span>
+          <div class="grid-lines" aria-hidden="true"></div>
+          <span class="pin" aria-hidden="true"></span>
+          <p class="badge">問津講院 · 全州</p>
+          <div class="foot">
+            <span class="sub">곤지산3길 7-30</span>
+            <a class="map-link" href="https://map.naver.com/p/search/전주시%20완산구%20곤지산3길%207-30" target="_blank" rel="noopener">지도에서 보기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <span class="footer-brand"><img class="flag footer-flag" src="assets/flag-sm.png" alt="" width="40" height="22">問津講院</span>
+      <nav class="footer-nav" aria-label="바닥글 메뉴">
+        <a href="#about">강원 소개</a>
+        <a href="#services">술수 · 학문 · 영성</a>
+        <a href="#fees">비용 안내</a>
+        <a href="#channels">공식 채널</a>
+        <a href="#visit">오시는 길</a>
+      </nav>
+    </div>
+
+    <div class="biz">
+      <p><b>상호</b>문진강원</p>
+      <p><b>사업자등록번호</b>528-09-03342</p>
+      <p><b>주소</b>전북특별자치도 전주시 완산구 곤지산3길 7-30</p>
+      <p><b>연락처</b><a href="tel:01037072331">010-3707-2331</a></p>
+      <p><b>이메일</b><a href="mailto:menes9237827@gmail.com">menes9237827@gmail.com</a></p>
+      <p><b>카톡</b><a href="https://pf.kakao.com/_pguvX" target="_blank" rel="noopener">pf.kakao.com/_pguvX</a></p>
+      <p class="biz-hours"><b>영업시간</b>09:00 ~ 22:00 (매주 일요일 휴무)</p>
+    </div>
+
+    <div class="copyright">
+      <span>© 2026 問津講院 · 문진강원. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
