@@ -224,6 +224,12 @@ section[id]{scroll-margin-top:96px}
 }
 .prose p + p{margin-top:18px}
 .prose p.split + p.split{margin-top:26px}
+/* 항목 앞 점 표시 — 사주 편 「어떤 자리인가」 */
+.prose p.pt{position:relative;padding-left:1.25em}
+.prose p.pt::before{
+  content:"•";position:absolute;left:.12em;top:0;
+  font-size:.92em;line-height:1.95;color:var(--ink-3);
+}
 .prose strong{font-weight:500;box-shadow:inset 0 -.5em 0 rgba(169,50,38,.1)}
 .quote{margin-top:30px;padding:20px 0 20px 24px;border-left:2px solid rgba(169,50,38,.5)}
 .quote-sym{width:16px;height:16px;opacity:.4;margin-bottom:10px}
