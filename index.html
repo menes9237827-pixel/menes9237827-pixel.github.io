@@ -519,6 +519,81 @@
     .map-panel{min-height:220px}
     .visit-list li{grid-template-columns:76px 1fr;gap:10px}
   }
+  /* ---------- 주역 타로 강의 팝업 (2026-11-26) ---------- */
+  .tp{
+    position:fixed;inset:0;z-index:120;display:none;place-items:center;
+    padding:22px 18px;background:rgba(24,21,18,.44);
+    -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  }
+  .tp.open{display:grid}
+  .tp-card{
+    position:relative;width:min(412px,100%);max-height:calc(100vh - 44px);
+    overflow-y:auto;overflow-x:hidden;
+    background:var(--paper);border:1px solid rgba(31,29,26,.18);border-radius:2px;
+    box-shadow:0 34px 80px -34px rgba(18,16,14,.72), 0 1px 0 rgba(255,255,255,.8) inset;
+    animation:tpIn .3s cubic-bezier(.22,.61,.36,1) both;
+  }
+  .tp-card:focus{outline:none}
+  @keyframes tpIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .tp-x{
+    position:absolute;top:9px;right:9px;z-index:2;
+    width:34px;height:34px;display:grid;place-items:center;
+    border:0;border-radius:50%;cursor:pointer;
+    background:rgba(252,249,243,.9);color:var(--ink);
+    font-family:var(--sans);font-size:19px;font-weight:400;line-height:1;
+    box-shadow:0 1px 7px rgba(31,29,26,.16);
+    transition:background .2s ease,color .2s ease;
+  }
+  .tp-x:hover{background:var(--ink);color:var(--hanji)}
+  /* 주역 타로 카드 1번(1080×1600)에서 카드 세 장만 잘라 보입니다 —
+     x 250~846 · y 676~952(전체의 23.1~78.2% · 42.3~59.5%) */
+  .tp-media{
+    position:relative;overflow:hidden;background:#FBF8F1;
+    aspect-ratio:596/276;border-bottom:1px solid var(--line-2);
+  }
+  .tp-media img{
+    position:absolute;top:0;left:0;display:block;
+    width:181.6%;max-width:none;height:auto;
+    transform:translate(-23.15%,-42.25%);
+  }
+  .tp-media::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(to bottom,#FBF8F1 0,rgba(251,248,241,0) 16px),
+               linear-gradient(to top,#FBF8F1 0,rgba(251,248,241,0) 34px);
+  }
+  .tp-body{padding:22px 24px 20px}
+  .tp-eyebrow{
+    margin:0 0 8px;font-size:10.5px;font-weight:600;
+    letter-spacing:.28em;color:var(--brand-deep);
+  }
+  .tp-title{font-size:20px;font-weight:600;line-height:1.4;letter-spacing:.01em;color:var(--ink)}
+  .tp-desc{margin-top:10px;font-size:13px;line-height:1.85;color:var(--ink-2)}
+  .tp-actions{margin-top:19px}
+  .tp-go{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    min-height:46px;padding:0 18px;border-radius:2px;
+    background:var(--ink);color:var(--hanji);
+    font-size:13.5px;letter-spacing:.1em;
+    transition:background .22s ease;
+  }
+  .tp-go:hover{background:var(--brand-deep)}
+  .tp-go .arrow{font-size:12px;opacity:.65}
+  .tp-sub{display:flex;align-items:center;justify-content:center;margin-top:11px}
+  .tp-opt{
+    padding:5px 13px;border:0;background:none;cursor:pointer;
+    font-family:inherit;font-size:12px;letter-spacing:.02em;color:var(--ink-3);
+    transition:color .2s ease;
+  }
+  .tp-opt:hover{color:var(--ink)}
+  .tp-sub .tp-opt + .tp-opt{border-left:1px solid var(--line)}
+  @media (max-width:620px){
+    .tp{padding:16px 14px}
+    .tp-card{max-height:calc(100vh - 32px)}
+    .tp-body{padding:19px 19px 17px}
+    .tp-title{font-size:18.5px}
+    .tp-desc{font-size:12.7px}
+    .tp-x{top:7px;right:7px;width:32px;height:32px;font-size:18px}
+  }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *{transition:none!important;animation:none!important}
@@ -1009,6 +1084,90 @@
     </div>
   </div>
 </footer>
+
+<!-- 주역 타로 강의 팝업 -->
+<div class="tp" id="tarotPopup" role="dialog" aria-modal="true" aria-labelledby="tarotPopupTitle" aria-describedby="tarotPopupDesc">
+  <div class="tp-card" tabindex="-1">
+    <button type="button" class="tp-x" data-tp-close aria-label="팝업 닫기">&times;</button>
+    <div class="tp-media">
+      <img src="assets/juyeok-tarot-1.webp" alt="주역 타로 카드 한 벌" width="1080" height="1600" loading="eager" decoding="async">
+    </div>
+    <div class="tp-body">
+      <p class="tp-eyebrow">周易 塔羅 · 講義</p>
+      <h2 class="tp-title" id="tarotPopupTitle">주역 타로 강의 모집</h2>
+      <p class="tp-desc" id="tarotPopupDesc">홀리츠카 아이칭 카드로 배우는 64괘 실전 풀이 · 기본 20시간(1회 1시간)</p>
+      <div class="tp-actions">
+        <a class="tp-go" href="juyeok-tarot.html">자세히 보기 <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="tp-sub">
+          <button type="button" class="tp-opt" data-tp-hide>오늘 하루 보지 않기</button>
+          <button type="button" class="tp-opt" data-tp-close>닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY = 'mjg.popup.tarot.juyeok';   /* 오늘 하루 보지 않기 — 자정에 만료 */
+  var pop = document.getElementById('tarotPopup');
+  if(!pop) return;
+
+  var until = 0;
+  try{ until = parseInt(localStorage.getItem(KEY) || '0', 10) || 0; }catch(e){}
+  if(until && Date.now() < until) return;
+
+  var opened = false, lastFocus = null;
+
+  function open(){
+    if(opened) return;
+    opened = true;
+    lastFocus = document.activeElement;
+    pop.classList.add('open');
+    var sw = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    if(sw > 0) document.body.style.paddingRight = sw + 'px';
+    var card = pop.querySelector('.tp-card');
+    if(card) card.focus({preventScroll:true});
+  }
+
+  function close(){
+    if(!opened) return;
+    opened = false;
+    pop.classList.remove('open');
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+  }
+
+  function hideToday(){
+    var d = new Date();
+    d.setHours(24, 0, 0, 0);   /* 오늘 자정 */
+    try{ localStorage.setItem(KEY, String(d.getTime())); }catch(e){}
+    close();
+  }
+
+  pop.addEventListener('click', function(e){
+    if(e.target.closest('[data-tp-close]')){ close(); return; }
+    if(e.target.closest('[data-tp-hide]')){ hideToday(); return; }
+    if(e.target === pop){ close(); }   /* 바깥 배경 */
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(!opened) return;
+    if(e.key === 'Escape'){ close(); return; }
+    if(e.key !== 'Tab') return;
+    var f = pop.querySelectorAll('a[href], button');
+    if(!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+
+  window.addEventListener('load', function(){ setTimeout(open, 260); });
+  if(document.readyState === 'complete') setTimeout(open, 260);
+})();
+</script>
 
 </body>
 </html>
