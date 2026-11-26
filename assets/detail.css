@@ -354,6 +354,9 @@ section[id]{scroll-margin-top:96px}
 .pager.seven{grid-template-columns:repeat(12,1fr)}
 .pager.seven .pg{grid-column:span 3}
 .pager.seven .pg:nth-child(n+5){grid-column:span 4}
+/* 8장 — 넉 장씩 두 줄로 고르게 채움 */
+.pager.eight{grid-template-columns:repeat(12,1fr)}
+.pager.eight .pg{grid-column:span 3}
 .pg{
   display:flex;flex-direction:column;justify-content:space-between;
   min-height:120px;padding:18px 18px 16px;
@@ -433,6 +436,8 @@ section[id]{scroll-margin-top:96px}
   .pager.seven .pg{grid-column:span 1}
   .pager.seven .pg:nth-child(n+5){grid-column:span 1}
   .pager.seven .pg:last-child{grid-column:span 2}
+  .pager.eight{grid-template-columns:repeat(2,1fr)}
+  .pager.eight .pg{grid-column:span 1}
   .cta-band{grid-template-columns:1fr}
 }
 @media (max-width:900px){
@@ -488,6 +493,7 @@ section[id]{scroll-margin-top:96px}
   .pager.five{grid-template-columns:1fr 1fr}
   .pager.six{grid-template-columns:1fr 1fr}
   .pager.seven{grid-template-columns:1fr 1fr}
+  .pager.eight{grid-template-columns:1fr 1fr}
   .pg{min-height:104px;padding:15px 15px 14px}
   .pg h3{font-size:14px}
   .who li{padding:18px 0}
