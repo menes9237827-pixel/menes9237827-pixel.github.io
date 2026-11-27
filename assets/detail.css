@@ -300,6 +300,37 @@ section[id]{scroll-margin-top:96px}
 .hours .v{font-family:var(--sans);font-weight:500;font-size:16px;letter-spacing:.02em;color:var(--ink)}
 .hours .sub{font-size:12.5px;letter-spacing:.02em;color:var(--ink-3)}
 
+/* ---------- 안내 카드 이미지 · 크게 보기 (2026-11-28) ---------- */
+#chulsan-taegil,#fees{scroll-margin-top:88px}   /* 배너에서 들어올 때 붙박이 머리에 제목이 가리지 않게 */
+@media (max-width:1199px){
+  #chulsan-taegil,#fees{scroll-margin-top:116px}
+}
+.guide-block{margin-top:clamp(28px,3.6vw,40px)}
+.guide-card{margin:clamp(20px,2.6vw,28px) auto 0;max-width:560px}
+.guide-card button{
+  display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:2px;
+  background:var(--paper);cursor:zoom-in;overflow:hidden;
+  box-shadow:0 18px 40px -32px rgba(31,29,26,.65);
+  transition:box-shadow .3s ease,transform .3s ease;
+}
+.guide-card button:hover{box-shadow:0 22px 46px -30px rgba(31,29,26,.6);transform:translateY(-2px)}
+.guide-card button:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.guide-card img{display:block;width:100%;height:auto}
+.guide-card figcaption{margin-top:11px;text-align:center;font-size:11.5px;letter-spacing:.08em;color:var(--ink-4)}
+.guide-lb{
+  position:fixed;inset:0;z-index:90;display:none;place-items:center;
+  background:rgba(20,18,16,.94);padding:14px;cursor:zoom-out;
+}
+.guide-lb.open{display:grid}
+.guide-lb img{max-width:100%;max-height:calc(100vh - 28px);width:auto;height:auto;box-shadow:0 24px 70px -24px #000}
+.guide-lb .hint{
+  position:absolute;left:0;right:0;bottom:12px;text-align:center;
+  font-size:11.5px;letter-spacing:.14em;color:rgba(247,242,234,.72);
+}
+@media (max-width:620px){
+  .guide-card{max-width:none}
+}
+
 /* 문진강원만의 깊이 */
 .depths{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;border-top:1px solid var(--line);margin-top:clamp(22px,3vw,32px)}
 .depths > li{padding:24px 0;border-bottom:1px solid var(--line)}

@@ -140,6 +140,22 @@
     </div>
   </section>
 
+  <section class="sec" id="fees">
+    <div class="wrap narrow">
+      <h2 class="h2"><span class="hanja" aria-hidden="true">費</span>상담 비용 안내</h2>
+      <p class="h2lead">주역 타로 상담은 전화 상담과 방문 상담의 가격이 같습니다</p>
+      <figure class="guide-card">
+        <button type="button" class="guide-open" aria-label="주역 타로 상담 비용 안내 카드 크게 보기">
+          <picture>
+            <source srcset="assets/juyeok-tarot-fee-guide.webp" type="image/webp">
+            <img src="assets/juyeok-tarot-fee-guide.jpg" alt="주역 타로 상담 비용 안내 — 전화·방문 상담 가격 동일. 한국어 상담은 처음 오신 분 30분 20,000원 · 1시간 50,000원, 두 번째부터 30분 30,000원 · 1시간 60,000원. 외국어 상담(영어·중국어·일본어)은 처음 오신 분 30분 30,000원 · 1시간 70,000원, 두 번째부터 30분 40,000원 · 1시간 80,000원. 첫 방문 1회 1만 원 할인. 문의 010-3707-2331, 카카오톡 채널 문진강원, 카카오톡 아이디 menes011." width="1024" height="1536" loading="lazy" decoding="async">
+          </picture>
+        </button>
+        <figcaption>카드를 누르면 크게 보실 수 있습니다</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="sec">
     <div class="wrap">
       <div class="cta-band">
@@ -304,6 +320,13 @@
   });
 })();
 </script>
+
+<div class="guide-lb" id="guide-lb" role="dialog" aria-modal="true" aria-label="안내 카드 크게 보기" aria-hidden="true" tabindex="-1">
+  <img alt="">
+  <p class="hint">화면을 누르거나 Esc 를 누르면 닫힙니다</p>
+</div>
+
+<script src="assets/guide-zoom.js" defer></script>
 
 </body>
 </html>

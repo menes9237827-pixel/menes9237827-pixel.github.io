@@ -503,6 +503,44 @@
     .rv-quote{font-size:14px}
   }
 
+  /* ---------- 주요 안내 배너 (2026-11-28) ---------- */
+  .notice-strip{padding:14px 0 0}
+  .notice-strip .wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .nt{
+    display:grid;grid-template-columns:104px minmax(0,1fr) auto;align-items:center;gap:16px;
+    padding:11px 18px 11px 11px;border:1px solid var(--line);border-radius:2px;
+    background:linear-gradient(to right,rgba(252,249,243,.95),rgba(241,234,222,.5));
+    box-shadow:0 12px 28px -30px rgba(31,29,26,.8);
+    transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease;
+  }
+  .nt:hover{border-color:rgba(0,157,188,.5);box-shadow:0 16px 32px -28px rgba(31,29,26,.75);transform:translateY(-1px)}
+  .nt-thumb{
+    position:relative;display:block;width:104px;height:76px;overflow:hidden;
+    border:1px solid var(--line-2);background:var(--paper);
+  }
+  .nt-thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+  .nt-body{min-width:0}
+  .nt-lb{display:block;font-size:10px;font-weight:600;letter-spacing:.2em;color:var(--brand-deep)}
+  .nt-title{
+    display:block;margin-top:5px;font-family:var(--sans);font-weight:600;
+    font-size:16px;line-height:1.35;letter-spacing:.01em;color:var(--ink);
+  }
+  .nt-desc{display:block;margin-top:5px;font-size:12.5px;line-height:1.6;color:var(--ink-3);word-break:keep-all}
+  .nt-go{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.13em;color:var(--ink-3);white-space:nowrap}
+  .nt-go .arrow{font-size:12px;letter-spacing:0;transition:transform .3s ease}
+  .nt:hover .nt-go{color:var(--brand-deep)}
+  .nt:hover .nt-go .arrow{transform:translateX(2px)}
+  @media (max-width:1024px){
+    .nt-go span:first-child{display:none}
+  }
+  @media (max-width:900px){
+    .notice-strip .wrap{grid-template-columns:1fr}
+    .nt{grid-template-columns:96px minmax(0,1fr) auto;gap:13px;padding:10px 15px 10px 10px}
+    .nt-thumb{width:96px;height:70px}
+    .nt-title{font-size:15px}
+    .nt-desc{font-size:12px}
+  }
+
   /* ---------- responsive ---------- */
   @media (max-width:1024px){
     .cards.four{grid-template-columns:repeat(2,1fr)}
@@ -666,6 +704,30 @@
 </header>
 
 <main id="top">
+
+  <!-- 주요 안내 배너 -->
+  <section class="notice-strip" aria-label="주요 안내">
+    <div class="wrap">
+      <a class="nt" href="saju.html#chulsan-taegil">
+        <span class="nt-thumb" aria-hidden="true"><img src="assets/chulsan-taegil-guide.jpg" alt="" width="1024" height="1536" loading="eager" decoding="async"></span>
+        <span class="nt-body">
+          <span class="nt-lb">出産擇日 · 주요 안내</span>
+          <span class="nt-title">출산택일 안내</span>
+          <span class="nt-desc">아이가 세상에 오는 날과 시각 · 1,000,000원</span>
+        </span>
+        <span class="nt-go"><span>보기</span><span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      <a class="nt" href="juyeok-tarot.html#fees">
+        <span class="nt-thumb" aria-hidden="true"><img src="assets/juyeok-tarot-fee-guide.jpg" alt="" width="1024" height="1536" loading="eager" decoding="async"></span>
+        <span class="nt-body">
+          <span class="nt-lb">周易 塔羅 · 주요 안내</span>
+          <span class="nt-title">주역 타로 상담 비용 안내</span>
+          <span class="nt-desc">한국어 30분 20,000원부터 · 첫 방문 1만 원 할인</span>
+        </span>
+        <span class="nt-go"><span>보기</span><span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+    </div>
+  </section>
 
   <!-- HERO -->
   <section class="hero">
