@@ -461,6 +461,49 @@
 
   :focus-visible{outline:2px solid var(--brand-deep);outline-offset:3px}
 
+  /* ---------- reviews : 상담 후기 (2026-11-28) ---------- */
+  .review-note{
+    margin:-6px 0 26px;padding:16px 20px;
+    border:1px solid var(--line);border-left:3px solid var(--brand);
+    background:rgba(241,234,222,.55);
+    font-size:13.5px;line-height:1.85;color:var(--ink-2);letter-spacing:0;
+  }
+  .review-note b{font-weight:600;color:var(--ink)}
+  .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .review{
+    position:relative;display:flex;flex-direction:column;
+    background:linear-gradient(to bottom,var(--paper),rgba(252,249,243,.55));
+    border:1px solid var(--line);padding:26px 24px 22px;
+  }
+  .review::before{
+    content:"";position:absolute;left:24px;right:24px;top:0;height:2px;
+    background:var(--brand);opacity:.9;
+  }
+  .rv-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .rv-name{font-family:var(--sans);font-weight:600;font-size:15.5px;letter-spacing:.02em;color:var(--ink)}
+  .rv-date{font-size:11.5px;letter-spacing:.1em;color:var(--ink-4);white-space:nowrap}
+  .rv-topic{margin-top:9px;font-size:11.5px;letter-spacing:.12em;color:var(--brand-deep)}
+  .rv-quote{
+    margin:16px 0 18px;padding-left:16px;border-left:2px solid rgba(0,157,188,.45);
+    font-size:14.5px;line-height:1.95;color:var(--ink-2);letter-spacing:0;
+  }
+  .rv-link{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    margin-top:auto;padding-top:16px;border-top:1px solid var(--line-2);
+    font-size:11.5px;letter-spacing:.14em;color:var(--ink-3);transition:color .25s ease;
+  }
+  .rv-link .arrow{font-size:13px;letter-spacing:0;transition:transform .3s ease}
+  .rv-link:hover{color:var(--brand-deep)}
+  .rv-link:hover .arrow{transform:translate(2px,-2px)}
+  .review-foot{margin-top:16px;font-size:11.5px;line-height:1.8;color:var(--ink-4)}
+  @media (max-width:960px){
+    .reviews{grid-template-columns:1fr;gap:14px}
+  }
+  @media (max-width:620px){
+    .review{padding:22px 20px 20px}
+    .rv-quote{font-size:14px}
+  }
+
   /* ---------- responsive ---------- */
   @media (max-width:1024px){
     .cards.four{grid-template-columns:repeat(2,1fr)}
@@ -613,6 +656,7 @@
       <a href="#about">강원 소개</a>
       <a href="#services">술수 · 학문 · 영성</a>
       <a href="#fees">비용 안내</a>
+      <a href="#reviews">상담 후기</a>
       <a href="#channels">공식 채널</a>
       <a href="#visit">오시는 길</a>
     </nav>
@@ -926,11 +970,77 @@
     </div>
   </section>
 
+  <!-- REVIEWS -->
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">四</span>
+        <div>
+          <h2 class="sec-title"><span class="hanja">聲</span>상담 후기</h2>
+          <p class="sec-lead">상담을 마치신 분들이 남겨 주신 글에서 그대로 옮겼습니다</p>
+        </div>
+      </div>
+
+      <p class="review-note">
+        아래 세 편은 예전 상호인 <b>미래산방 · 미래산방사주</b> 시절에 남겨 주신 실제 후기입니다.
+        지금은 상호를 <b>문진강원</b>으로 쓰고 있습니다. 원문은 각 글 아래의 링크에서 보실 수 있습니다.
+      </p>
+
+      <div class="reviews">
+        <article class="review">
+          <div class="rv-head">
+            <span class="rv-name">토리맘</span>
+            <span class="rv-date">2025. 3. 4.</span>
+          </div>
+          <p class="rv-topic">전화 사주 상담 · 진로와 성격</p>
+          <blockquote class="rv-quote">
+            “사주 일주 확인을 하신 후 꼼꼼하게 대종사님이 상담을 차분하게 진행해 주셨어요.
+            저 같은 경우 진로, 건강, 성격 이런 쪽으로 다양하게 말씀을 해주셨어요.”
+          </blockquote>
+          <a class="rv-link" href="https://blog.naver.com/sky634/223783474818" target="_blank" rel="noopener">
+            <span>네이버 블로그 원문 보기</span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="review">
+          <div class="rv-head">
+            <span class="rv-name">리벳데스</span>
+            <span class="rv-date">2025. 3. 7.</span>
+          </div>
+          <p class="rv-topic">전화 사주 상담 · 성격과 직업운</p>
+          <blockquote class="rv-quote">
+            “제가 어떤 사람인지, 들을수록 깜짝 놀랐어요. 제가 아는 저에 대해 너무 잘 아시더라고요.”
+          </blockquote>
+          <a class="rv-link" href="https://blog.naver.com/johana5587/223788046105" target="_blank" rel="noopener">
+            <span>네이버 블로그 원문 보기</span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="review">
+          <div class="rv-head">
+            <span class="rv-name">리아</span>
+            <span class="rv-date">2025. 1. 19.</span>
+          </div>
+          <p class="rv-topic">전화 사주 상담 · 진로와 인간관계</p>
+          <blockquote class="rv-quote">
+            “인간관계 진로고민 모두 시원하게 해결한 느낌이 들었답니다.
+            엄청 세세하고 오랜 시간 동안 제 사주에 대해 풀이를 해주셔서 감사했어요.”
+          </blockquote>
+          <a class="rv-link" href="https://blog.naver.com/haneu1_97/223730246819" target="_blank" rel="noopener">
+            <span>네이버 블로그 원문 보기</span><span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </article>
+      </div>
+
+      <p class="review-foot">토리맘 님의 글은 이용권을 제공받고 작성된 후기입니다.</p>
+    </div>
+  </section>
+
   <!-- CHANNELS -->
   <section class="sec" id="channels">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-num">四</span>
+        <span class="sec-num">五</span>
         <div>
           <h2 class="sec-title">외부 공식 채널</h2>
           <p class="sec-lead">문진강원의 글과 강의는 아래 채널에서 이어집니다</p>
@@ -1018,7 +1128,7 @@
   <section class="sec" id="visit">
     <div class="wrap">
       <div class="sec-head">
-        <span class="sec-num">五</span>
+        <span class="sec-num">六</span>
         <div>
           <h2 class="sec-title">오시는 길</h2>
           <p class="sec-lead">전주 완산구 곤지산 자락</p>
@@ -1064,6 +1174,7 @@
         <a href="#about">강원 소개</a>
         <a href="#services">술수 · 학문 · 영성</a>
         <a href="#fees">비용 안내</a>
+        <a href="#reviews">상담 후기</a>
         <a href="#channels">공식 채널</a>
         <a href="#visit">오시는 길</a>
       </nav>
